@@ -1,25 +1,35 @@
-import java.util.Scanner;//input scanner
+import java.util.Scanner; //import scanner input
 public class Circle_RectangleArea {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner in = new Scanner(System.in);//construct scanner object
+		Scanner in = new Scanner(System.in);//create a scanner object
 		
-		//initialize variables
+		//declaration and initialization of variables
 		
-		double fTemp = 0.0; //variable for original temperature
-		double cTemp = 0.0; //variable for celsius conversion
-		double fTemp2 = 0.0; //variable for converting back to fahrenheit
+		double radiusC = 0.0;//variable stores radius of circle
+		double widthR = 0.0; //variable to store width of rectangle
+		double lengthR = 0.0; //variable to store length of rectangle
+		final double piConstant = Math.PI;//create a constant for pi
+		double areaC = 0.0; //variable for area of a circle
+		double areaR = 0.0; //variable for area of rectangle
 		
-		System.out.print("Enter your temperature in fahrenheit: ");//prompt user to input original temperature in f
-		fTemp = in.nextInt();//assign input to variable
+		System.out.print("Enter your circle's radius: ");//prompt the user to input the radius
+		radiusC = in.nextDouble();//input the radius
 		
-		cTemp = (fTemp - 32.0)*(5.0/9.0);//set equation for conversion
-		fTemp2 = ((cTemp * (9.0/5.0)+32.0));//convert back to fahrenheit
-
-		System.out.printf("Original temperature: %.0f degrees F.\n", fTemp);//output original temp in F
-		System.out.printf("Equivalent to: %.0f degrees C.\n", cTemp); // print output of celsius conversion
-		System.out.printf("Converted back: %.0f degrees F.\n", fTemp2); // print output conversion back
+		
+		areaC = piConstant*Math.pow(radiusC,2);//calculate area of circle pi*radius^2
+		
+		System.out.print("Enter your rectangle's width: ");//prompt user to input width
+		widthR = in.nextDouble();//input the width
+		
+		System.out.print("Enter your rectangles's length: ");//prompt user to input the length
+		lengthR = in.nextDouble();//input the length
+		
+		areaR = widthR*lengthR;//calculate the area of a rectangle width*length
+		
+		System.out.printf("The area of a circle with a radius of %.1f is: %.2f\n", radiusC, areaC );//output the circle's area
+		System.out.printf("The area of a rectangle with a width of %.1f and a length of %.1f is: %.2f", widthR, lengthR, areaR);//output the rectangles's area
 	}
 
 }
