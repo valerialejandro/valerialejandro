@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Valeria Alejandro
-- 👀 I’m interested in Computer Science, especially in the Fashion Industry.
+- 👀 I’m interested in Computer Science
 - 🌱 I’m currently learning Java
 - 📫 How to reach me:
 - Twitter: @valejandromez
